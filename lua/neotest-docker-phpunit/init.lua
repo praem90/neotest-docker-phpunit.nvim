@@ -12,7 +12,7 @@ M.setup = function (opts)
     phpunit.build_spec = function (args)
         local spec = existing(args)
 
-        local build_options = M.get_build_options(args)
+        local build_options = M.get_build_options(opts)
         if build_options.volume then
             table.insert(spec.command, "--volume=" .. build_options.volume)
         end
