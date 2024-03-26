@@ -21,6 +21,10 @@ M.setup = function (opts)
             table.insert(spec.command, "--container=" .. build_options.container)
         end
 
+        if build_options.standalone then
+            table.insert(spec.command, "--standalone")
+        end
+
         -- Allows you to extend and customize the table
         if build_options.callback and type(build_options.callback) == "function" then
             spec = build_options.callback(spec, args)
