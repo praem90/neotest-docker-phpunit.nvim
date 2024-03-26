@@ -2,11 +2,16 @@
 Run phpunit tests in the docker container. This plugin extends the (neotest-phpunit)[https://github.com/olimorris/neotest-phpunit] plugin and execute the test in the specified dokcer container.
 
 ## Installation
-Install from source
+### Install binary
 ```zsh
 git clone https://github.com/praem90/neotest-docker-phpunit.git
 cd neotest-docker-phpunit
 cargo build
+```
+
+### Install nvim plugin using Plug
+```zsh
+Plug 'praem90/neotest-docker-phpunit.nvim'
 ```
 
 ## Configuration
@@ -37,4 +42,4 @@ require('neotest').setup({
 ```
 
 ## TODO
-
+ - [ ] Improve document
