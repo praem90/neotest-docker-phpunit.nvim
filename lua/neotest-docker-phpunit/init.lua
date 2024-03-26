@@ -1,5 +1,16 @@
+---@tag neotestDockerPhpunit
+---@class neotestDockerPhpunit.Option
+---@field volumne string
+---@field container string
+---@field standalone boolean
+---@field callback function
+
+---@class neotestDockerPhpunit.Config : neotest.Config
+---@field docker_phpunit table<string, neotestDockerPhpunit.Option>
+
 local M = {}
 
+---@param opts neotestDockerPhpunit.Config
 M.setup = function (opts)
     opts = opts or {}
 
@@ -36,6 +47,8 @@ M.setup = function (opts)
     return phpunit
 end
 
+---@param opts neotestDockerPhpunit.Config
+---@return neotestDockerPhpunit.Option
 M.get_build_options = function (opts)
     local conf = opts.docker_phpunit or {}
 
