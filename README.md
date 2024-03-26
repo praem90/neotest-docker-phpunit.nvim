@@ -4,8 +4,8 @@ Run phpunit tests in the docker container. This plugin extends the (neotest-phpu
 ## Installation
 Install from source
 ```zsh
-git clone https://github.com/praem90/phpunit-docker-test.git
-cd phpunit-docker-test
+git clone https://github.com/praem90/neotest-docker-phpunit.git
+cd neotest-docker-phpunit
 cargo build
 ```
 
