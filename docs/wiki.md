@@ -20,13 +20,16 @@ To run a test, neotest-phpunit adds the `log-junit` the report file tmp path and
 
 The `log-junit` wont be available on the host machine if the tests were executed in the docker.
 So,once the tests were executed, the results must be exported to the host machine.
+Also the test result contains the container path not the host machine's path.
+The cli tool copies the result and replace the test file paths to the host machines paths
 Along with these added below the the options to the binary
 
  1. `--container` The container name
  2. `--standalone` Whether the docker compose or standalone container
  3. `--volume` To map the work directory from host machine to the container as like as a docker volume option
 
- I've created the cli tool [ neotest-docker-phpunit ]( https://github.com/praem90/neotest-docker-phpunit ) to interact with the docker and export the result xml file into the host machine.
+ I've created the cli tool [ neotest-docker-phpunit ]( https://github.com/praem90/neotest-docker-phpunit ) to interact
+ with the docker and export the result xml file into the host machine.
 
  So this plugin depends on both the neotest-phpunit adapter the [ neotest-docker-phpunit ]( https://github.com/praem90/neotest-docker-phpunit ) cli tool
 
