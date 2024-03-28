@@ -51,4 +51,5 @@ require('neotest').setup({
 ```
 
 ## TODO
+ - [ ] Improve STDOUT
  - [ ] Improve document
